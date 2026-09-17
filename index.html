@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#102041" />
+  <title>HUB7 Documentos</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23102041'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-size='27' font-family='Arial' font-weight='700' fill='white'%3EH7%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://alcdn.msauth.net/browser/2.38.3/js/msal-browser.min.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">H7</span><span>HUB7 Documentos</span></div>
+      <button id="new-search" class="new-chat" type="button">＋ Nueva consulta</button>
+      <nav aria-label="Consultas sugeridas"><p class="nav-label">Sugerencias</p><button data-query="RIU">Programa RIU</button><button data-query="bienestar laboral">Bienestar laboral</button><button data-query="plan de sucesiones">Plan de sucesiones</button></nav>
+      <div class="privacy"><strong>Entorno privado</strong><span>Solo documentos permitidos</span></div>
+    </aside>
+    <section class="workspace">
+      <header class="topbar">
+        <div class="top-title"><span class="mobile-mark">H7</span><strong>Buscar en SharePoint</strong></div>
+        <div class="account"><span id="user-label">Sin iniciar sesión</span><button id="auth-button" type="button">Entrar con Microsoft</button></div>
+      </header>
+      <section id="welcome" class="welcome">
+        <div class="spark">✦</div><p class="eyebrow">TU DOCUMENTACIÓN, A MANO</p><h1>¿Qué necesitas encontrar?</h1>
+        <p>Inicia sesión con tu cuenta de HUB7S y busca en los documentos de SharePoint a los que ya tienes acceso.</p>
+        <button id="welcome-login" class="primary" type="button">Entrar con Microsoft</button>
+      </section>
+      <section id="results" class="results hidden" aria-live="polite"></section>
+      <div class="composer-wrap">
+        <form id="search-form" class="composer"><input id="query" type="search" placeholder="Busca proyectos, propuestas o documentos…" autocomplete="off" disabled /><button id="search-button" aria-label="Buscar" disabled>↑</button></form>
+        <p>Los resultados proceden directamente de SharePoint y respetan tus permisos.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
