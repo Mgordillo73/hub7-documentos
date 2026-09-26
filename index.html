@@ -6,16 +6,17 @@
   <meta name="theme-color" content="#102041" />
   <title>HUB7 Documentos</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23102041'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-size='27' font-family='Arial' font-weight='700' fill='white'%3EH7%3C/text%3E%3C/svg%3E" />
-  <link rel="stylesheet" href="styles.css?v=21" />
+  <link rel="stylesheet" href="styles.css?v=22" />
+  <style>#recent-searches button{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.recent-empty{margin:8px 10px;color:#9eabc4;font-size:12px;line-height:1.4}</style>
   <script src="https://cdn.jsdelivr.net/npm/@azure/msal-browser@2.38.3/lib/msal-browser.min.js" defer></script>
-  <script src="app.js?v=21" defer></script>
+  <script src="app.js?v=22" defer></script>
 </head>
 <body>
   <main class="app-shell">
     <aside class="sidebar">
       <div class="brand"><span class="brand-mark">H7</span><span>HUB7 Documentos</span></div>
       <button id="new-search" class="new-chat" type="button">＋ Nueva consulta</button>
-      <nav aria-label="Consultas sugeridas"><p class="nav-label">Sugerencias</p><button data-query="RIU">Programa RIU</button><button data-query="bienestar laboral">Bienestar laboral</button><button data-query="plan de sucesiones">Plan de sucesiones</button></nav>
+      <nav aria-label="Últimas búsquedas"><p class="nav-label">Últimas búsquedas</p><div id="recent-searches"></div></nav>
       <div class="privacy"><strong>Entorno privado</strong><span>Solo documentos permitidos</span></div>
     </aside>
     <section class="workspace">
